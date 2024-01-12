@@ -1,1 +1,1 @@
-SQL Server.
+Repasando SQL Server.
