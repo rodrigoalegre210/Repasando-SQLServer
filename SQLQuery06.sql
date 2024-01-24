@@ -28,13 +28,13 @@ Trabaje con la tabla "agenda" que almacena los datos de sus amigos.
 
 4- Modifique el registro cuyo nombre sea "Juan" por "Juan Jose" (1 registro afectado)
 
-5- Actualice los registros cuyo n鷐ero telef髇ico sea igual a "4545454" por "4445566" 
+5- Actualice los registros cuyo n煤mero telef贸nico sea igual a "4545454" por "4445566" 
 (2 registros afectados)
 
-6- Actualice los registros que tengan en el campo "nombre" el valor "Juan" por "Juan Jose" (ning鷑 
-registro afectado porque ninguno cumple con la condici髇 del "where")
+6- Actualice los registros que tengan en el campo "nombre" el valor "Juan" por "Juan Jose" (ning煤n 
+registro afectado porque ninguno cumple con la condici贸n del "where")
 
-7 - Luego de cada actualizaci髇 ejecute un select que muestre todos los registros de la tabla.
+7 - Luego de cada actualizaci贸n ejecute un select que muestre todos los registros de la tabla.
 
 */
 
@@ -79,13 +79,13 @@ SELECT * FROM agenda;
 
 /*
 
-Trabaje con la tabla "libros" de una librer韆.
+Trabaje con la tabla "libros" de una librer铆a.
 
 1- Elimine la tabla si existe:
  if object_id('libros') is not null
   drop table libros;
 
-2- Cr閑la con los siguientes campos: titulo (cadena de 30 caracteres de longitud), autor (cadena de 
+2- Cr茅ela con los siguientes campos: titulo (cadena de 30 caracteres de longitud), autor (cadena de 
 20), editorial (cadena de 15) y precio (float):
  create table libros (
   titulo varchar(30),
@@ -114,8 +114,8 @@ afectado)
  update libros set autor='Adrian Paenza'
   where autor='Paenza';
 
-6- Nuevamente, modifique los registros cuyo autor sea igual  a "Paenza", por "Adrian Paenza" (ning鷑 
-registro afectado porque ninguno cumple la condici髇)
+6- Nuevamente, modifique los registros cuyo autor sea igual  a "Paenza", por "Adrian Paenza" (ning煤n 
+registro afectado porque ninguno cumple la condici贸n)
  update libros set autor='Adrian Paenza'
   where autor='Paenza';
 
@@ -128,7 +128,7 @@ editorial sea igual a "Emece" (3 registros afectados):
  update libros set editorial='Emece S.A.'
   where editorial='Emece';
 
-9 - Luego de cada actualizaci髇 ejecute un select que mustre todos los registros de la tabla.
+9 - Luego de cada actualizaci贸n ejecute un select que mustre todos los registros de la tabla.
 
 */
 
