@@ -1,11 +1,11 @@
 /*
 
-Trabaje con la tabla "libros" de una librería.
+Trabaje con la tabla "libros" de una librerÃ­a.
 1- Elimine la tabla si existe:
  if object_id('libros') is not null
   drop table libros;
 
-2- Créela con los siguientes campos, estableciendo como clave primaria el campo "codigo":
+2- CrÃ©ela con los siguientes campos, estableciendo como clave primaria el campo "codigo":
  create table libros(
   codigo int not null,
   titulo varchar(40) not null,
@@ -22,11 +22,11 @@ Trabaje con la tabla "libros" de una librería.
  insert into libros (codigo,titulo,autor,editorial)
   values (3,'Aprenda PHP','Mario Molina','Nuevo Siglo');
 
-4- Ingrese un registro con código repetido (aparece un mensaje de error)
+4- Ingrese un registro con cÃ³digo repetido (aparece un mensaje de error)
 
 5- Intente ingresar el valor "null" en el campo "codigo"
 
-6- Intente actualizar el código del libro "Martin Fierro" a "1" (mensaje de error)
+6- Intente actualizar el cÃ³digo del libro "Martin Fierro" a "1" (mensaje de error)
 
 */
 
@@ -67,7 +67,7 @@ WHERE titulo = 'Martin Fierro';
 
 /*
 
-Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla llamada "alumnos".
+Un instituto de enseÃ±anza almacena los datos de sus estudiantes en una tabla llamada "alumnos".
 1- Elimine la tabla "alumnos" si existe:
  if object_id('alumnos') is not null
   drop table alumnos;
@@ -101,7 +101,7 @@ campo "documento" y "legajo" (no lo permite):
  insert into alumnos (legajo,documento,nombre,domicilio)
   values('A567','23545345','Morales Marcos','Avellaneda 348');
 
-6- Intente ingresar un alumno con número de documento existente (no lo permite)
+6- Intente ingresar un alumno con nÃºmero de documento existente (no lo permite)
 
 7- Intente ingresar un alumno con documento nulo (no lo permite)
 
