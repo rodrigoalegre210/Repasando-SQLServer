@@ -1,7 +1,7 @@
 /*
 Primer problema:
-Necesita almacenar los datos de sus amigos en una tabla. Los datos que guardar· ser·n: apellido, 
-nombre, domicilio y telÈfono.
+Necesita almacenar los datos de sus amigos en una tabla. Los datos que guardar√° ser√°n: apellido, 
+nombre, domicilio y tel√©fono.
 1- Elimine la tabla "agenda" si existe:
  if object_id('agenda') is not null
   drop table agenda;
@@ -13,7 +13,7 @@ nombre, domicilio y telÈfono.
   domicilio varchar(30),
   telefono varchar(11)
  );
-aparece un mensaje de error porque usamos un caracter inv·lido ("/") para el nombre.
+aparece un mensaje de error porque usamos un caracter inv√°lido ("/") para el nombre.
 
 3- Cree una tabla llamada "agenda", debe tener los siguientes campos: apellido, varchar(30); nombre, 
 varchar(20); domicilio, varchar (30) y telefono, varchar(11):
@@ -50,8 +50,8 @@ EXEC sp_columns agenda;
 DROP TABLE agenda;
 
 /*
-Necesita almacenar informaciÛn referente a los libros de su biblioteca personal. Los datos que 
-guardar· ser·n: tÌtulo del libro, nombre del autor y nombre de la editorial.
+Necesita almacenar informaci√≥n referente a los libros de su biblioteca personal. Los datos que 
+guardar√° ser√°n: t√≠tulo del libro, nombre del autor y nombre de la editorial.
 1- Elimine la tabla "libros", si existe:
  if object_id('libros') is not null
   drop table libros;
