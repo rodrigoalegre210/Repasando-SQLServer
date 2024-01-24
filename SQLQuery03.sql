@@ -1,5 +1,5 @@
 /*
-Un videoclub que alquila pelÌculas en video almacena la informaciÛn de sus pelÌculas en alquiler en 
+Un videoclub que alquila pel√≠culas en video almacena la informaci√≥n de sus pel√≠culas en alquiler en 
 una tabla llamada "peliculas".
 
 1- Elimine la tabla, si existe:
@@ -26,11 +26,11 @@ una tabla llamada "peliculas".
  insert into peliculas (titulo, actor, duracion, cantidad)
   values ('Elsa y Fred','China Zorrilla',110,2);
 
-5- Realice un "select" mostrando solamente el tÌtulo y actor de todas las pelÌculas
+5- Realice un "select" mostrando solamente el t√≠tulo y actor de todas las pel√≠culas
 
-6- Muestre el tÌtulo y duraciÛn de todas las peliculas
+6- Muestre el t√≠tulo y duraci√≥n de todas las peliculas
 
-7- Muestre el tÌtulo y la cantidad de copias
+7- Muestre el t√≠tulo y la cantidad de copias
 */
 
 IF OBJECT_ID('peliculas') IS NOT NULL
@@ -91,7 +91,7 @@ SELECT titulo, cantidad FROM peliculas;
 
 6- Muestre el nombre, documento y domicilio de los empleados
 
-7- Realice un "select" mostrando el documento, sexo y sueldo b·sico de todos los empleados
+7- Realice un "select" mostrando el documento, sexo y sueldo b√°sico de todos los empleados
 */
 
 IF OBJECT_ID('empleados') IS NOT NULL
