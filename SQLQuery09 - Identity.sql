@@ -1,11 +1,11 @@
 /*
 
-Una farmacia guarda información referente a sus medicamentos en una tabla llamada "medicamentos".
+Una farmacia guarda informaciÃ³n referente a sus medicamentos en una tabla llamada "medicamentos".
 1- Elimine la tabla,si existe:
  if object_id('medicamentos') is not null
   drop table medicamentos;
 
-2- Cree la tabla con un campo "codigo" que genere valores secuenciales automáticamente:
+2- Cree la tabla con un campo "codigo" que genere valores secuenciales automÃ¡ticamente:
  create table medicamentos(
   codigo int identity,
   nombre varchar(20) not null,
@@ -25,12 +25,12 @@ Una farmacia guarda información referente a sus medicamentos en una tabla llamad
  insert into medicamentos (nombre, laboratorio,precio,cantidad)
   values('Amoxidal 500','Bayer',15.60,100);
 
-5- Verifique que SQL Server generó valores para el campo "código" de modo automático:
+5- Verifique que SQL Server generÃ³ valores para el campo "cÃ³digo" de modo automÃ¡tico:
  select * from medicamentos;
 
 6- Intente ingresar un registro con un valor para el campo "codigo"
 
-7- Intente actualizar un valor de código (aparece un mensaje de error)
+7- Intente actualizar un valor de cÃ³digo (aparece un mensaje de error)
 
 8- Elimine el registro con codigo "3" (1 registro eliminado)
 
@@ -38,7 +38,7 @@ Una farmacia guarda información referente a sus medicamentos en una tabla llamad
  insert into medicamentos (nombre, laboratorio,precio,cantidad)
   values('Amoxilina 500','Bayer',15.60,100);
 
-10- Seleccione todos los registros para ver qué valor guardó SQL Server en el campo código:
+10- Seleccione todos los registros para ver quÃ© valor guardÃ³ SQL Server en el campo cÃ³digo:
  select * from medicamentos;
 
 */
@@ -91,12 +91,12 @@ SELECT * FROM medicamentos;
 
 /*
 
-Un videoclub almacena información sobre sus películas en una tabla llamada "peliculas".
+Un videoclub almacena informaciÃ³n sobre sus pelÃ­culas en una tabla llamada "peliculas".
 1- Elimine la tabla si existe:
  if object_id('peliculas') is not null
   drop table peliculas;
 
-2- Créela definiendo un campo "codigo" autoincrementable y como clave primaria:
+2- CrÃ©ela definiendo un campo "codigo" autoincrementable y como clave primaria:
  create table peliculas(
   codigo int identity,
   titulo varchar(40),
@@ -120,12 +120,12 @@ Un videoclub almacena información sobre sus películas en una tabla llamada "peli
  insert into peliculas (titulo,actor,duracion)
   values('La vida es bella','zzz',220);
 
-5- Seleccione todos los registros y verifique la carga automática de los códigos:
+5- Seleccione todos los registros y verifique la carga automÃ¡tica de los cÃ³digos:
  select * from peliculas;
 
-6- Intente actualizar el codigo de una película (aparece un mensaje de error)
+6- Intente actualizar el codigo de una pelÃ­cula (aparece un mensaje de error)
 
-7- Elimine la película "La vida es bella".
+7- Elimine la pelÃ­cula "La vida es bella".
 
 8- Ingrese un nuevo registro.
 
