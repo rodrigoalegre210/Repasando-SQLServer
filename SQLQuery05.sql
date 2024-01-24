@@ -1,6 +1,6 @@
 /*
 
-Trabaje con la tabla "agenda" que registra la información referente a sus amigos.
+Trabaje con la tabla "agenda" que registra la informaciÃ³n referente a sus amigos.
 
 1- Elimine la tabla si existe:
  if object_id('agenda') is not null
@@ -24,7 +24,7 @@ domicilio (cadena de 30) y telefono (cadena de 11):
 
 4- Elimine el registro cuyo nombre sea "Juan" (1 registro afectado)
 
-5- Elimine los registros cuyo número telefónico sea igual a "4545454" (2 registros afectados):
+5- Elimine los registros cuyo nÃºmero telefÃ³nico sea igual a "4545454" (2 registros afectados):
 
 6- Muestre la tabla.
 
@@ -79,7 +79,7 @@ SELECT * FROM agenda;
 
 /*
 
-Un comercio que vende artículos de computación registra los datos de sus artículos en una tabla con 
+Un comercio que vende artÃ­culos de computaciÃ³n registra los datos de sus artÃ­culos en una tabla con 
 ese nombre.
 
 1- Elimine "articulos", si existe:
@@ -107,9 +107,9 @@ ese nombre.
  insert into articulos (codigo, nombre, descripcion, precio,cantidad)
   values (4,'teclado','ingles Biswal',100,50);
  insert into articulos (codigo, nombre, descripcion, precio,cantidad)
-  values (5,'teclado','español Biswal',90,50);
+  values (5,'teclado','espaÃ±ol Biswal',90,50);
 
-5- Elimine los artículos cuyo precio sea mayor o igual a 500 (2 registros)
+5- Elimine los artÃ­culos cuyo precio sea mayor o igual a 500 (2 registros)
  delete from articulos
   where precio>=500;
 
@@ -119,11 +119,11 @@ ese nombre.
  delete from articulos
   where nombre='impresora';
 
-8- Elimine todos los artículos cuyo código sea diferente a 4 (1 registro)
+8- Elimine todos los artÃ­culos cuyo cÃ³digo sea diferente a 4 (1 registro)
  delete from articulos
   where codigo<>4;
 
-9- Mostrar la tabla después que borra cada registro.
+9- Mostrar la tabla despuÃ©s que borra cada registro.
 
 */
 
@@ -153,7 +153,7 @@ values (3,'monitor','Samsung 14',800,10);
 insert into articulos (codigo, nombre, descripcion, precio,cantidad)
 values (4,'teclado','ingles Biswal',100,50);
 insert into articulos (codigo, nombre, descripcion, precio,cantidad)
-values (5,'teclado','español Biswal',90,50);
+values (5,'teclado','espaÃ±ol Biswal',90,50);
 
 -- 5
 DELETE FROM articulos
