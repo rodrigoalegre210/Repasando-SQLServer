@@ -1,9 +1,9 @@
 /*
-Un videoclub que alquila películas en video almacena la información de sus películas en una tabla 
-llamada "peliculas"; para cada película necesita los siguientes datos:
+Un videoclub que alquila pelÃ­culas en video almacena la informaciÃ³n de sus pelÃ­culas en una tabla 
+llamada "peliculas"; para cada pelÃ­cula necesita los siguientes datos:
  -nombre, cadena de caracteres de 20 de longitud,
  -actor, cadena de caracteres de 20 de longitud,
- -duración, valor numérico entero.
+ -duraciÃ³n, valor numÃ©rico entero.
  -cantidad de copias: valor entero.
 
 1- Elimine la tabla, si existe:
