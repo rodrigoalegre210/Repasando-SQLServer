@@ -23,7 +23,7 @@ domicilio (cadena de 30) y telefono (cadena de 11).
 
 7- Seleccione los nombres y domicilios de quienes tengan apellido igual a "Lopez" (3 registros)
 
-8- Muestre el nombre de quienes tengan el teléfono "4545454" (2 registros)
+8- Muestre el nombre de quienes tengan el telÃ©fono "4545454" (2 registros)
 */
 
 IF OBJECT_ID('agenda') IS NOT NULL
@@ -61,7 +61,7 @@ SELECT nombre FROM agenda
 WHERE telefono = '4545454';
 
 /*
-Trabaje con la tabla "libros" de una librería que guarda información referente a sus libros 
+Trabaje con la tabla "libros" de una librerÃ­a que guarda informaciÃ³n referente a sus libros 
 disponibles para la venta.
 
 1- Elimine la tabla si existe.
@@ -82,7 +82,7 @@ disponibles para la venta.
 
 5- Seleccione los registros cuyo autor sea "Borges" (1 registro)
 
-6- Seleccione los títulos de los libros cuya editorial sea "Emece" (2 registros)
+6- Seleccione los tÃ­tulos de los libros cuya editorial sea "Emece" (2 registros)
 
 7- Seleccione los nombres de las editoriales de los libros cuyo titulo sea "Martin Fierro" (2 
 registros)
