@@ -1,6 +1,6 @@
 /*
 
-Una farmacia guarda información referente a sus medicamentos en una tabla llamada "medicamentos".
+Una farmacia guarda informaciÃ³n referente a sus medicamentos en una tabla llamada "medicamentos".
 1- Elimine la tabla, si existe:
   if object_id('medicamentos') is not null
    drop table medicamentos;
@@ -30,11 +30,11 @@ las otras "YES".
 5- Vea todos los registros:
  select * from medicamentos;
 
-6- Ingrese un registro con valor "0" para el precio y cadena vacía para el laboratorio:
+6- Ingrese un registro con valor "0" para el precio y cadena vacÃ­a para el laboratorio:
  insert into medicamentos (codigo,nombre, laboratorio,precio,cantidad)
   values(4,'Bayaspirina','',0,150);
 
-7- Ingrese un registro con valor "0" para el código y cantidad y cadena vacía para el nombre:
+7- Ingrese un registro con valor "0" para el cÃ³digo y cantidad y cadena vacÃ­a para el nombre:
  insert into medicamentos (codigo,nombre,laboratorio,precio,cantidad)
   values(0,'','Bayer',15.60,0);
 
@@ -47,16 +47,16 @@ error):
   values(null,'Amoxidal jarabe','Bayer',25,120);
 
 10- Recupere los registros que contengan valor "null" en el campo "laboratorio", luego los que 
-tengan una cadena vacía en el mismo campo. Note que el resultado es diferente.
+tengan una cadena vacÃ­a en el mismo campo. Note que el resultado es diferente.
 
 11- Recupere los registros que contengan valor "null" en el campo "precio", luego los que tengan el 
 valor 0 en el mismo campo. Note que el resultado es distinto.
 
-12- Recupere los registros cuyo laboratorio no contenga una cadena vacía, luego los que sean 
+12- Recupere los registros cuyo laboratorio no contenga una cadena vacÃ­a, luego los que sean 
 distintos de "null".
-Note que la salida de la primera sentencia no muestra los registros con cadenas vacías y tampoco los 
+Note que la salida de la primera sentencia no muestra los registros con cadenas vacÃ­as y tampoco los 
 que tienen valor nulo; el resultado de la segunda sentencia muestra los registros con valor para el 
-campo laboratorio (incluso cadena vacía).
+campo laboratorio (incluso cadena vacÃ­a).
 
 13- Recupere los registros cuyo precio sea distinto de 0, luego los que sean distintos de "null":
 Note que la salida de la primera sentencia no muestra los registros con valor 0 y tampoco los que 
@@ -137,12 +137,12 @@ WHERE precio IS NOT NULL;
 
 /*
 
-Trabaje con la tabla que almacena los datos sobre películas, llamada "peliculas".
+Trabaje con la tabla que almacena los datos sobre pelÃ­culas, llamada "peliculas".
 1- Elimine la tabla si existe:
  if object_id('peliculas') is not null
   drop table peliculas;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table peliculas(
   codigo int not null,
   titulo varchar(40) not null,
@@ -168,7 +168,7 @@ note que el campo "codigo" y "titulo", en la columna "IS_NULLABLE" muestra "NO" 
  insert into peliculas (codigo,titulo,actor,duracion)
   values(5,'Mujer bonita','R. Gere-J. Roberts',0);
 
-5- Recupere todos los registros para ver cómo SQL Server los almacenó:
+5- Recupere todos los registros para ver cÃ³mo SQL Server los almacenÃ³:
  select * from peliculas;
 
 6- Intente ingresar un registro con valor nulo para campos que no lo admiten (aparece un mensaje de 
@@ -176,19 +176,19 @@ error):
  insert into peliculas (codigo,titulo,actor,duracion)
   values(null,'Mujer bonita','R. Gere-J. Roberts',190);
 
-7- Muestre los registros con valor nulo en el campo "actor" y luego los que guardan una cadena vacía 
+7- Muestre los registros con valor nulo en el campo "actor" y luego los que guardan una cadena vacÃ­a 
 (note que la salida es distinta) (1 registro)
 
-8- Modifique los registros que tengan valor de duración desconocido (nulo) por "120" (1 registro 
+8- Modifique los registros que tengan valor de duraciÃ³n desconocido (nulo) por "120" (1 registro 
 actualizado)
 
-9- Coloque 'Desconocido' en el campo "actor" en los registros que tengan una cadena vacía en dicho 
+9- Coloque 'Desconocido' en el campo "actor" en los registros que tengan una cadena vacÃ­a en dicho 
 campo (1 registro afectado)
 
-10- Muestre todos los registros. Note que el cambio anterior no afectó a los registros con valor 
+10- Muestre todos los registros. Note que el cambio anterior no afectÃ³ a los registros con valor 
 nulo en el campo "actor".
 
-11- Elimine los registros cuyo título sea una cadena vacía (1 registro)
+11- Elimine los registros cuyo tÃ­tulo sea una cadena vacÃ­a (1 registro)
 
 */
 
