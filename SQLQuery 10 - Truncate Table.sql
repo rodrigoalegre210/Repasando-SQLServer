@@ -1,6 +1,6 @@
 /*
 
-Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla llamada "alumnos".
+Un instituto de enseÃ±anza almacena los datos de sus estudiantes en una tabla llamada "alumnos".
 1- Elimine la tabla "alumnos" si existe:
  if object_id('alumnos') is not null
   drop table alumnos;
@@ -13,7 +13,7 @@ Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla lla
   domicilio varchar(30)
  );
 
-3- Ingrese los siguientes registros y muéstrelos para ver la secuencia de códigos:
+3- Ingrese los siguientes registros y muÃ©strelos para ver la secuencia de cÃ³digos:
  insert into alumnos (documento,nombre,domicilio)
   values('22345345','Perez Mariana','Colon 234');
  insert into alumnos (documento,nombre,domicilio)
@@ -25,7 +25,7 @@ Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla lla
 
 4- Elimine todos los registros con "delete".
 
-5- Ingrese los siguientes registros y selecciónelos para ver cómo SQL Server generó los códigos:
+5- Ingrese los siguientes registros y selecciÃ³nelos para ver cÃ³mo SQL Server generÃ³ los cÃ³digos:
  insert into alumnos (documento,nombre,domicilio)
   values('22345345','Perez Mariana','Colon 234');
  insert into alumnos (documento,nombre,domicilio)
@@ -38,7 +38,7 @@ Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla lla
 
 6- Elimine todos los registros con "truncate table".
 
-7- Ingrese los siguientes registros y muestre todos los registros para ver que SQL Server reinició 
+7- Ingrese los siguientes registros y muestre todos los registros para ver que SQL Server reiniciÃ³ 
 la secuencia del campo "identity":
  insert into alumnos (documento,nombre,domicilio)
   values('22345345','Perez Mariana','Colon 234');
@@ -108,7 +108,7 @@ SELECT * FROM alumnos;
 
 /*
 
-Un comercio que vende artículos de computación registra los datos de sus artículos en una tabla con 
+Un comercio que vende artÃ­culos de computaciÃ³n registra los datos de sus artÃ­culos en una tabla con 
 ese nombre.
 1- Elimine "articulos", si existe:
  if object_id('articulos') is not null
@@ -130,24 +130,24 @@ ese nombre.
 
 4- Elimine todos los registros con "truncate table".
 
-5- Ingrese algunos registros y muéstrelos para ver que la secuencia de códigos se reinicia:
+5- Ingrese algunos registros y muÃ©strelos para ver que la secuencia de cÃ³digos se reinicia:
  insert into articulos (nombre, descripcion, precio)
   values ('monitor','Samsung 14',800);
  insert into articulos (nombre, descripcion, precio)
   values ('teclado','ingles Biswal',100);
  insert into articulos (nombre, descripcion, precio)
-  values ('teclado','español Biswal',90);
+  values ('teclado','espaÃ±ol Biswal',90);
  select * from articulos;
 
 6- Elimine todos los registros con "delete".
 
-7- Ingrese algunos registros y muéstrelos para ver que la secuencia de códigos continua:
+7- Ingrese algunos registros y muÃ©strelos para ver que la secuencia de cÃ³digos continua:
  insert into articulos (nombre, descripcion, precio)
   values ('monitor','Samsung 14',800);
  insert into articulos (nombre, descripcion, precio)
   values ('teclado','ingles Biswal',100);
  insert into articulos (nombre, descripcion, precio)
-  values ('teclado','español Biswal',90);
+  values ('teclado','espaÃ±ol Biswal',90);
  select * from articulos;
 
 */
@@ -181,7 +181,7 @@ values ('monitor','Samsung 14',800);
 insert into articulos (nombre, descripcion, precio)
 values ('teclado','ingles Biswal',100);
 insert into articulos (nombre, descripcion, precio)
-values ('teclado','español Biswal',90);
+values ('teclado','espaÃ±ol Biswal',90);
 
 SELECT * FROM articulos;
 
@@ -194,6 +194,6 @@ values ('monitor','Samsung 14',800);
 insert into articulos (nombre, descripcion, precio)
 values ('teclado','ingles Biswal',100);
 insert into articulos (nombre, descripcion, precio)
-values ('teclado','español Biswal',90);
+values ('teclado','espaÃ±ol Biswal',90);
  
 SELECT * FROM articulos;
