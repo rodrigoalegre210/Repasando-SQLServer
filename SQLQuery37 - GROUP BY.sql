@@ -36,13 +36,13 @@ de las personas que visitan o compran en su stand para luego enviarle publicidad
  insert into visitantes
   values ('Gabriela Duarte',21,null,null,'Rio Tercero',default,'gabrielaltorres@hotmail.com',321.50);
 
-4- Queremos saber la cantidad de visitantes de cada ciudad utilizando la cláusula "group by" (4 filas devueltas)
+4- Queremos saber la cantidad de visitantes de cada ciudad utilizando la clÃ¡usula "group by" (4 filas devueltas)
 
-5- Queremos la cantidad visitantes con teléfono no nulo, de cada ciudad (4 filas devueltas)
+5- Queremos la cantidad visitantes con telÃ©fono no nulo, de cada ciudad (4 filas devueltas)
 
 6- Necesitamos el total del monto de las compras agrupadas por sexo (3 filas)
 
-7- Se necesita saber el máximo y mínimo valor de compra agrupados por sexo y ciudad (6 filas)
+7- Se necesita saber el mÃ¡ximo y mÃ­nimo valor de compra agrupados por sexo y ciudad (6 filas)
 
 8- Calcule el promedio del valor de compra agrupados por ciudad (4 filas)
 
@@ -171,13 +171,13 @@ Una empresa almacena los datos de sus empleados en una tabla "empleados".
  insert into empleados
   values('Andres Costa','28444555',default,'Secretaria',null,null,null);
 
-4- Cuente la cantidad de empleados agrupados por sección (5 filas)
+4- Cuente la cantidad de empleados agrupados por secciÃ³n (5 filas)
 
-5- Calcule el promedio de hijos por sección (5 filas):
+5- Calcule el promedio de hijos por secciÃ³n (5 filas):
 
-6- Cuente la cantidad de empleados agrupados por año de ingreso (6 filas)
+6- Cuente la cantidad de empleados agrupados por aÃ±o de ingreso (6 filas)
 
-7- Calcule el promedio de sueldo por sección de los empleados con hijos (4 filas)
+7- Calcule el promedio de sueldo por secciÃ³n de los empleados con hijos (4 filas)
 
 8- Realice la misma consulta anterior pero esta vez incluya las secciones que devuelven cero o 
 "null" en la columna de agregado (5 filas)
@@ -233,7 +233,7 @@ FROM empleados
 GROUP BY seccion;
 
 -- 6
-SELECT DATEPART(YEAR, fechaingreso) AS 'Año de ingreso',
+SELECT DATEPART(YEAR, fechaingreso) AS 'AÃ±o de ingreso',
 COUNT(*) AS Empleados
 FROM empleados
 GROUP BY DATEPART(YEAR, fechaingreso);
