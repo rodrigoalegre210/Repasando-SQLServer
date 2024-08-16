@@ -5,7 +5,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes".
  if object_id('clientes') is not null
   drop table clientes;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table clientes (
   codigo int identity,
   nombre varchar(30) not null,
@@ -42,7 +42,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes".
  insert into clientes
   values ('Joaquin Robles','Diego Rivera 147', 'Guadalajara','Jalisco','Mexico');
 
-4- Necesitamos la cantidad de clientes por país y la cantidad total de clientes en una sola consulta 
+4- Necesitamos la cantidad de clientes por paÃ­s y la cantidad total de clientes en una sola consulta 
 (4 filas)
 Note que la consulta retorna los registros agrupados por pais y una fila extra en la que la columna 
 "pais" contiene "null" y la columna con la cantidad muestra la cantidad total.
@@ -124,7 +124,7 @@ WITH ROLLUP;
 
 /*
 
-Un instituto de enseñanza guarda las notas de sus alumnos en una tabla llamada "notas".
+Un instituto de enseÃ±anza guarda las notas de sus alumnos en una tabla llamada "notas".
 1- Elimine la tabla si existe:
  if object_id('notas') is not null
   drop table notas;
