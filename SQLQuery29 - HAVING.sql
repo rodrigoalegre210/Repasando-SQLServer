@@ -5,7 +5,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes".
  if object_id('clientes') is not null
   drop table clientes;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table clientes (
   codigo int identity,
   nombre varchar(30) not null,
@@ -118,7 +118,7 @@ de las personas que visitan o compran en su stand para luego enviarle publicidad
  if object_id('visitantes') is not null
   drop table visitantes;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table visitantes(
   nombre varchar(30),
   edad tinyint,
@@ -155,12 +155,12 @@ de las personas que visitan o compran en su stand para luego enviarle publicidad
 valor superior a 50 (3 filas)
 
 5- Obtenga el total de las compras agrupados por ciudad y sexo (group by), teniendo en cuenta todos 
-los valores (all), considerando sólo los montos de compra superiores a 50 (where), los visitantes 
-con teléfono (where), sin considerar la ciudad de "Cordoba" (having), ordenados por ciudad (order 
+los valores (all), considerando sÃ³lo los montos de compra superiores a 50 (where), los visitantes 
+con telÃ©fono (where), sin considerar la ciudad de "Cordoba" (having), ordenados por ciudad (order 
 by) (3 filas)
 
 6- Muestre el monto mayor de compra agrupado por ciudad, siempre que dicho valor supere los 50 pesos 
-(having), considerando sólo los visitantes de sexo femenino y domicilio conocido (where) (2 filas)
+(having), considerando sÃ³lo los visitantes de sexo femenino y domicilio conocido (where) (2 filas)
 
 7- Agrupe por ciudad y sexo, muestre para cada grupo el total de visitantes, la suma de sus compras 
 y el promedio de compras, ordenado por la suma total y considerando las filas con promedio superior 
