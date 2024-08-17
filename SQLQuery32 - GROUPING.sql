@@ -5,7 +5,7 @@ Una empresa tiene registrados sus empleados en una tabla llamada "empleados".
  if object_id('empleados') is not null
   drop table empleados;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table empleados (
   documento varchar(8) not null,
   nombre varchar(30),
@@ -36,7 +36,7 @@ Una empresa tiene registrados sus empleados en una tabla llamada "empleados".
 4- Cuente la cantidad de empleados agrupados por sexo y estado civil, empleando "rollup".
 Es dificil distinguir los valores de detalle y resumen.
 
-5- Realice la misma consulta anterior pero emplee la función "grouping" para los dos campos por los 
+5- Realice la misma consulta anterior pero emplee la funciÃ³n "grouping" para los dos campos por los 
 que se agrupa para distinguir los valores de resumen y de detalle.
 Note que las columnas de resumen contienen 1 y las de detalle 0.
 
