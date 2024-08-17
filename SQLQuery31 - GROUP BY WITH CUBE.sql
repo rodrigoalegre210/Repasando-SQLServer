@@ -1,7 +1,7 @@
 /*
 
-Un comercio guarda la información de sus ventas en una tabla llamada "ventas" en la que se registra 
-diariamente, el número de venta, el monto total de la compra, el tipo de pago (c=contado, t=tarjeta) 
+Un comercio guarda la informaciÃ³n de sus ventas en una tabla llamada "ventas" en la que se registra 
+diariamente, el nÃºmero de venta, el monto total de la compra, el tipo de pago (c=contado, t=tarjeta) 
 y el nombre del vendedor.
 1- Elimine la tabla si existe:
  if object_id('ventas') is not null
@@ -98,7 +98,7 @@ de las personas que visitan o compran en su stand para luego enviarle publicidad
  if object_id('visitantes') is not null
   drop table visitantes;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table visitantes(
   nombre varchar(30),
   edad tinyint,
