@@ -16,21 +16,21 @@ de las personas que visitan o compran en su stand para luego enviarle publicidad
   montocompra decimal (6,2) not null
  );
 
-3- Defina una restricci髇 "default" para el campo "ciudad" que almacene el valor "Cordoba" en caso 
+3- Defina una restricci贸n "default" para el campo "ciudad" que almacene el valor "Cordoba" en caso 
 de no ingresar valor para dicho campo:
  alter table visitantes
   add constraint DF_visitantes_ciudad
   default 'Cordoba'
   for ciudad;
 
-4- Defina una restricci髇 "default" para el campo "montocompra" que almacene el valor "0" en caso de 
+4- Defina una restricci贸n "default" para el campo "montocompra" que almacene el valor "0" en caso de 
 no ingresar valor para dicho campo:
  alter table visitantes
   add constraint DF_visitantes_montocompra
   default 0
   for montocompra;
 
-5- Ingrese algunos registros sin valor para los campos con restricci髇 "default":
+5- Ingrese algunos registros sin valor para los campos con restricci贸n "default":
  insert into visitantes
   values ('Susana Molina',35,'Colon 123',default,59.80);
  insert into visitantes (nombre,edad,domicilio)
@@ -38,17 +38,17 @@ no ingresar valor para dicho campo:
  insert into visitantes
   values ('Mariana Juarez',45,'Carlos Paz',null,23.90);
 
-6- Vea c髆o se almacenaron los registros:
+6- Vea c贸mo se almacenaron los registros:
  select * from visitantes;
 
 7- Vea las restricciones creadas anteriormente.
-aparecen dos filas, una por cada restricci髇.
+aparecen dos filas, una por cada restricci贸n.
 
-8- Intente agregar otra restricci髇 "default" al campo "ciudad".
-Aparece un mensaje de error indicando que el campo ya tiene una restricci髇 "default" y sabemos 
-que no puede establecerse m醩 de una restricci髇 "default" por campo.
+8- Intente agregar otra restricci贸n "default" al campo "ciudad".
+Aparece un mensaje de error indicando que el campo ya tiene una restricci贸n "default" y sabemos 
+que no puede establecerse m谩s de una restricci贸n "default" por campo.
 
-9- Intente establecer una restricci髇 "default" al campo "identity".
+9- Intente establecer una restricci贸n "default" al campo "identity".
 No se permite.
 
 */
@@ -107,7 +107,7 @@ FOR numero;
 
 /*
 
-Una playa de estacionamiento almacena cada d韆 los datos de los veh韈ulos que ingresan en la tabla 
+Una playa de estacionamiento almacena cada d铆a los datos de los veh铆culos que ingresan en la tabla 
 llamada "vehiculos".
 1- Elimine la tabla, si existe:
  if object_id('vehiculos') is not null
@@ -121,7 +121,7 @@ llamada "vehiculos".
   horasalida datetime
  );
 
-3- Establezca una restricci髇 "default" para el campo "tipo" que almacene el valor "a" en caso de no 
+3- Establezca una restricci贸n "default" para el campo "tipo" que almacene el valor "a" en caso de no 
 ingresarse valor para dicho campo.
 
 4- Ingrese un registro sin valor para el campo "tipo":
@@ -130,11 +130,11 @@ ingresarse valor para dicho campo.
 5- Recupere los registros:
  select * from vehiculos;
 
-6- Intente establecer otra restricci髇 "default" para el campo "tipo" que almacene el valor "m" en 
+6- Intente establecer otra restricci贸n "default" para el campo "tipo" que almacene el valor "m" en 
 caso de no ingresarse valor para dicho campo.
-No lo permite porque un campo solamente admite una restricci髇 "default" y ya tiene una.
+No lo permite porque un campo solamente admite una restricci贸n "default" y ya tiene una.
 
-7- Establezca una restricci髇 "default" para el campo "horallegada" que almacene la fecha y hora del 
+7- Establezca una restricci贸n "default" para el campo "horallegada" que almacene la fecha y hora del 
 sistema.
 
 8- Ingrese un registro sin valor para los campos de tipo datetime.
