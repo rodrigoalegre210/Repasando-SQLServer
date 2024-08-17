@@ -5,7 +5,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes".
  if object_id('clientes') is not null
   drop table clientes;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table clientes (
   codigo int identity,
   nombre varchar(30) not null,
@@ -122,7 +122,7 @@ propietarios para cobrar impuestos:
  if object_id('inmuebles') is not null
   drop table inmuebles;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table inmuebles (
   documento varchar(8) not null,
   apellido varchar(30),
