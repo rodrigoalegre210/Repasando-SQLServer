@@ -5,7 +5,7 @@ Una empresa tiene registrados sus empleados en una tabla llamada "empleados".
  if object_id('empleados') is not null
   drop table empleados;
 
-2- Créela con la siguiente estructura:
+2- CrÃ©ela con la siguiente estructura:
  create table empleados (
   documento varchar(8) not null,
   nombre varchar(30),
@@ -33,15 +33,15 @@ Una empresa tiene registrados sus empleados en una tabla llamada "empleados".
 
 4- Muestre los 5 primeros registros (5 registros)
 
-5- Muestre nombre y seccion de los 4 primeros registros ordenados por sección (4 registros)
+5- Muestre nombre y seccion de los 4 primeros registros ordenados por secciÃ³n (4 registros)
 
 6- Realice la misma consulta anterior pero incluya todos los registros que tengan el mismo valor en 
-"seccion" que el último (8 registros)
+"seccion" que el Ãºltimo (8 registros)
 
 7- Muestre nombre, estado civil y seccion de los primeros 4 empleados ordenados por estado civil y 
-sección (4 registros)
+secciÃ³n (4 registros)
 
-8- Realice la misma consulta anterior pero incluya todos los valores iguales al último registro 
+8- Realice la misma consulta anterior pero incluya todos los valores iguales al Ãºltimo registro 
 retornado (5 registros)
 
 */
