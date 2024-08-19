@@ -5,14 +5,14 @@ Una empresa tiene registrados datos de sus empleados en una tabla llamada "emple
  if object_id('empleados') is not null
   drop table empleados;
 
-2- Cr閑la con la siguiente estructura:
+2- Cr茅ela con la siguiente estructura:
  create table empleados (
   documento varchar(8) not null,
   nombre varchar(30),
   seccion varchar(20)
  );
 
-3- Ingrese algunos registros, dos de ellos con el mismo n鷐ero de documento:
+3- Ingrese algunos registros, dos de ellos con el mismo n煤mero de documento:
  insert into empleados
   values ('22222222','Alberto Lopez','Sistemas');
  insert into empleados
@@ -20,28 +20,28 @@ Una empresa tiene registrados datos de sus empleados en una tabla llamada "emple
  insert into empleados
   values ('23333333','Carlos Fuentes','Administracion');
 
-4- Intente establecer una restricci髇 "primary key" para la tabla para que el documento no se repita 
+4- Intente establecer una restricci贸n "primary key" para la tabla para que el documento no se repita 
 ni admita valores nulos:
  alter table empleados
  add constraint PK_empleados_documento
  primary key(documento);
-No lo permite porque la tabla contiene datos que no cumplen con la restricci髇, debemos eliminar (o 
+No lo permite porque la tabla contiene datos que no cumplen con la restricci贸n, debemos eliminar (o 
 modificar) el registro que tiene documento duplicado:
  delete from empleados
   where nombre='Carlos Fuentes';
 
-5- Establezca la restricci髇 "primary key" del punto 4.
+5- Establezca la restricci贸n "primary key" del punto 4.
 
 6- Intente actualizar un documento para que se repita.
-No lo permite porque va contra la restricci髇.
+No lo permite porque va contra la restricci贸n.
 
-7-Intente establecer otra restricci髇 "primary key" con el campo "nombre".
-No lo permite, s髄o puede haber una restricci髇 "primary key" por tabla.
+7-Intente establecer otra restricci贸n "primary key" con el campo "nombre".
+No lo permite, s贸lo puede haber una restricci贸n "primary key" por tabla.
 
 8- Intente ingresar un registro con valor nulo para el documento.
-No lo permite porque la restricci髇 no admite valores nulos.
+No lo permite porque la restricci贸n no admite valores nulos.
 
-9- Establezca una restricci髇 "default" para que almacene "00000000" en el documento en caso de 
+9- Establezca una restricci贸n "default" para que almacene "00000000" en el documento en caso de 
 omitirlo en un "insert".
 
 10- Ingrese un registro sin valor para el documento.
@@ -49,8 +49,8 @@ omitirlo en un "insert".
 11- Vea el registro:
  select * from empleados;
 
-12- Intente ingresar otro empleado sin documento expl韈ito.
-No lo permite porque se duplicar韆 la clave.
+12- Intente ingresar otro empleado sin documento expl铆cito.
+No lo permite porque se duplicar铆a la clave.
 
 13- Vea las restricciones de la tabla empleados (2 filas):
  exec sp_helpconstraint empleados;
@@ -124,7 +124,7 @@ exec sp_helpconstraint empleados;
 
 /*
 
-Una empresa de remises tiene registrada la informaci髇 de sus veh韈ulos en una tabla llamada 
+Una empresa de remises tiene registrada la informaci贸n de sus veh铆culos en una tabla llamada 
 "remis".
 1- Elimine la tabla si existe:
  if object_id('remis') is not null
@@ -142,14 +142,14 @@ Una empresa de remises tiene registrada la informaci髇 de sus veh韈ulos en una t
  insert into remis values('ABC123','Renault 12','1990');
  insert into remis values('DEF456','Fiat Duna','1995');
 
-4- Intente definir una restricci髇 "primary key" para el campo "patente".
+4- Intente definir una restricci贸n "primary key" para el campo "patente".
 No lo permite porque el campo no fue definido "not null".
 
-5- Establezca una restricci髇 "primary key" para el campo "numero".
-Si bien "numero" no fue definido expl韈itamente "not null", no acepta valores nulos por ser 
+5- Establezca una restricci贸n "primary key" para el campo "numero".
+Si bien "numero" no fue definido expl铆citamente "not null", no acepta valores nulos por ser 
 "identity".
 
-6- Vea la informaci髇 de las restricciones (2 filas):
+6- Vea la informaci贸n de las restricciones (2 filas):
  exec sp_helpconstraint remis;
 
 */
