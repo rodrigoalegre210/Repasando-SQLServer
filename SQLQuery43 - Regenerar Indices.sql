@@ -1,7 +1,7 @@
 /*
 
 Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
-1- Elimine la tabla si existe y créela con la siguiente estructura:
+1- Elimine la tabla si existe y crÃ©ela con la siguiente estructura:
  if object_id('alumnos') is not null
   drop table alumnos;
  create table alumnos(
@@ -12,61 +12,61 @@ Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
   notafinal decimal(4,2)
  );
 
-2- Cree un índice no agrupado para el campo "apellido".
+2- Cree un Ã­ndice no agrupado para el campo "apellido".
 
-3- Vea la información de los índices de "alumnos".
+3- Vea la informaciÃ³n de los Ã­ndices de "alumnos".
 
-4- Modifíquelo agregando el campo "nombre".
+4- ModifÃ­quelo agregando el campo "nombre".
 
-5- Verifique que se modificó:
+5- Verifique que se modificÃ³:
  exec sp_helpindex alumnos;
 
-6- Establezca una restricción "unique" para el campo "documento".
+6- Establezca una restricciÃ³n "unique" para el campo "documento".
 
-7- Vea la información que muestra "sp_helpindex":
+7- Vea la informaciÃ³n que muestra "sp_helpindex":
   exec sp_helpindex alumnos;
 
-8- Intente modificar con "drop_existing" alguna característica del índice que se creó 
-automáticamente al agregar la restricción "unique":
+8- Intente modificar con "drop_existing" alguna caracterÃ­stica del Ã­ndice que se creÃ³ 
+automÃ¡ticamente al agregar la restricciÃ³n "unique":
  create clustered index UQ_alumnos_documento
   on alumnos(documento)
   with drop_existing;
-No se puede emplear "drop_existing" con índices creados a partir de una restricción.
+No se puede emplear "drop_existing" con Ã­ndices creados a partir de una restricciÃ³n.
 
-9- Cree un índice no agrupado para el campo "legajo".
+9- Cree un Ã­ndice no agrupado para el campo "legajo".
 
-10- Muestre todos los índices:
+10- Muestre todos los Ã­ndices:
  exec sp_helpindex alumnos;
 
-11- Convierta el índice creado en el punto 9 a agrupado conservando las demás características.
+11- Convierta el Ã­ndice creado en el punto 9 a agrupado conservando las demÃ¡s caracterÃ­sticas.
 
-12- Verifique que se modificó:
+12- Verifique que se modificÃ³:
  exec sp_helpindex alumnos;
 
-13- Intente convertir el índice "I_alumnos_legajo" a no agrupado:
+13- Intente convertir el Ã­ndice "I_alumnos_legajo" a no agrupado:
  create nonclustered index I_alumnos_legajo
   on alumnos(legajo)
   with drop_existing;
-No se puede convertir un índice agrupado en no agrupado.
+No se puede convertir un Ã­ndice agrupado en no agrupado.
 
-14- Modifique el índice "I_alumnos_apellido" quitándole el campo "nombre".
+14- Modifique el Ã­ndice "I_alumnos_apellido" quitÃ¡ndole el campo "nombre".
 
-15- Intente convertir el índice "I_alumnos_apellido" en agrupado:
+15- Intente convertir el Ã­ndice "I_alumnos_apellido" en agrupado:
  create clustered index I_alumnos_apellido
   on alumnos(apellido)
   with drop_existing;
-No lo permite porque ya existe un índice agrupado.
+No lo permite porque ya existe un Ã­ndice agrupado.
 
-16- Modifique el índice "I_alumnos_legajo" para que sea único y conserve todas las otras 
-características.
+16- Modifique el Ã­ndice "I_alumnos_legajo" para que sea Ãºnico y conserve todas las otras 
+caracterÃ­sticas.
 
-17- Verifique la modificación:
+17- Verifique la modificaciÃ³n:
  exec sp_helpindex alumnos;
 
-18- Modifique nuevamente el índice "I_alumnos_legajo" para que no sea único y conserve las demás 
-características.
+18- Modifique nuevamente el Ã­ndice "I_alumnos_legajo" para que no sea Ãºnico y conserve las demÃ¡s 
+caracterÃ­sticas.
 
-19- Verifique la modificación:
+19- Verifique la modificaciÃ³n:
  exec sp_helpindex alumnos;
 
 */
