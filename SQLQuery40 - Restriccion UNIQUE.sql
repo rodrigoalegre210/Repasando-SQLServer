@@ -1,6 +1,6 @@
 /*
 
-Una empresa de remises tiene registrada la información de sus vehículos en una tabla llamada 
+Una empresa de remises tiene registrada la informaciÃ³n de sus vehÃ­culos en una tabla llamada 
 "remis".
 1- Elimine la tabla si existe:
  if object_id('remis') is not null
@@ -21,19 +21,19 @@ Una empresa de remises tiene registrada la información de sus vehículos en una t
  insert into remis values('GHI789','Fiat Duna','1995');
  insert into remis values(null,'Fiat Duna','1995');
 
-4- Intente agregar una restricción "unique" para asegurarse que la patente del remis no tomará 
+4- Intente agregar una restricciÃ³n "unique" para asegurarse que la patente del remis no tomarÃ¡ 
 valores repetidos.
 No se puede porque hay valores duplicados.
 
-5- Elimine el registro con patente duplicada y establezca la restricción.
+5- Elimine el registro con patente duplicada y establezca la restricciÃ³n.
 Note que hay 1 registro con valor nulo en "patente".
 
 6- Intente ingresar un registro con patente repetida (no lo permite)
 
 7- Intente ingresar un registro con valor nulo para el campo "patente".
-No lo permite porque la clave estaría duplicada.
+No lo permite porque la clave estarÃ­a duplicada.
 
-8- Muestre la información de las restricciones:
+8- Muestre la informaciÃ³n de las restricciones:
  exec sp_helpconstraint remis;
 
 */
