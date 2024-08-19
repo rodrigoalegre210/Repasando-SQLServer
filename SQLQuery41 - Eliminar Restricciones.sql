@@ -1,6 +1,6 @@
 /*
 
-Una playa de estacionamiento almacena cada d韆 los datos de los veh韈ulos que ingresan en la tabla 
+Una playa de estacionamiento almacena cada d铆a los datos de los veh铆culos que ingresan en la tabla 
 llamada "vehiculos".
 1- Elimine la tabla, si existe:
  if object_id('vehiculos') is not null
@@ -14,31 +14,31 @@ llamada "vehiculos".
   horasalida datetime
  );
 
-3- Establezca una restricci髇 "check" que admita solamente los valores "a" y "m" para el campo 
+3- Establezca una restricci贸n "check" que admita solamente los valores "a" y "m" para el campo 
 "tipo":
  alter table vehiculos
  add constraint CK_vehiculos_tipo
  check (tipo in ('a','m'));
 
-4- Establezca una restricci髇 "default" para el campo "tipo" que almacene el valor "a" en caso de no 
+4- Establezca una restricci贸n "default" para el campo "tipo" que almacene el valor "a" en caso de no 
 ingresarse valor para dicho campo:
  alter table vehiculos
   add constraint DF_vehiculos_tipo
   default 'a'
   for tipo;
 
-5- Establezca una restricci髇 "check" para el campo "patente" para que acepte 3 letras seguidas de 3 
-d韌itos:
+5- Establezca una restricci贸n "check" para el campo "patente" para que acepte 3 letras seguidas de 3 
+d铆gitos:
  alter table vehiculos
  add constraint CK_vehiculos_patente_patron
  check (patente like '[A-Z][A-Z][A-Z][0-9][0-9][0-9]');
 
-6- Agregue una restricci髇 "primary key" que incluya los campos "patente" y "horallegada":
+6- Agregue una restricci贸n "primary key" que incluya los campos "patente" y "horallegada":
  alter table vehiculos
  add constraint PK_vehiculos_patentellegada
  primary key(patente,horallegada);
 
-7- Ingrese un veh韈ulo:
+7- Ingrese un veh铆culo:
  insert into vehiculos values('SDR456','a','2005/10/10 10:10',null);
 
 8- Intente ingresar un registro repitiendo la clave primaria:
@@ -55,12 +55,12 @@ No se permite.
  exec sp_helpconstraint vehiculos;
 aparecen 4 filas, 2 correspondientes a restricciones "check", 1 a "default" y 1 a "primary key".
 
-12- Elimine la restricci髇 "default" del campo "tipo".
+12- Elimine la restricci贸n "default" del campo "tipo".
 
 13- Vea si se ha eliminado:
  exec sp_helpconstraint vehiculos;
 
-14- Elimine la restricci髇 "primary key" y "check".
+14- Elimine la restricci贸n "primary key" y "check".
 
 15- Vea si se han eliminado:
  exec sp_helpconstraint vehiculos;
@@ -73,10 +73,10 @@ IF OBJECT_ID('vehiculos') IS NOT NULL
 
 -- 2
 CREATE TABLE vehiculos(
-	patente CHAR(6) NOT NULL,
-	tipo CHAR(1), -- A = Auto, M = Moto
-	horallegada DATETIME NOT NULL,
-	horasalida DATETIME
+	patente 	CHAR(6) NOT NULL,
+	tipo 		CHAR(1), -- A = Auto, M = Moto
+	horallegada 	DATETIME NOT NULL,
+	horasalida	DATETIME
 );
 
 -- 3
