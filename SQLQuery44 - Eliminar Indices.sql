@@ -1,7 +1,7 @@
 /*
 
 Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
-1- Elimine la tabla si existe y créela con la siguiente estructura:
+1- Elimine la tabla si existe y crÃ©ela con la siguiente estructura:
  if object_id('alumnos') is not null
   drop table alumnos;
  create table alumnos(
@@ -12,35 +12,35 @@ Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
   notafinal decimal(4,2)
  );
 
-2- Cree un índice no agrupado para el campo "apellido".
+2- Cree un Ã­ndice no agrupado para el campo "apellido".
 
-3- Establezca una restricción "primary" para el campo "legajo" y especifique que cree un índice 
+3- Establezca una restricciÃ³n "primary" para el campo "legajo" y especifique que cree un Ã­ndice 
 "agrupado".
 
-4- Vea la información que muestra "sp_helpindex":
+4- Vea la informaciÃ³n que muestra "sp_helpindex":
   exec sp_helpindex alumnos;
 
-5- Intente eliminar el índice "PK_alumnos_legajo" con "drop index":
+5- Intente eliminar el Ã­ndice "PK_alumnos_legajo" con "drop index":
  drop index PK_alumnos_legajo;
 No se puede.
 
-6- Intente eliminar el índice "I_alumnos_apellido" sin especificar el nombre de la tabla:
+6- Intente eliminar el Ã­ndice "I_alumnos_apellido" sin especificar el nombre de la tabla:
  drop index I_alumnos_apellido;
 Mensaje de error.
 
-7- Elimine el índice "I_alumnos_apellido" especificando el nombre de la tabla.
+7- Elimine el Ã­ndice "I_alumnos_apellido" especificando el nombre de la tabla.
 
-8- Verifique que se eliminó:
+8- Verifique que se eliminÃ³:
  exec sp_helpindex alumnos;
 
-9- Solicite que se elimine el índice "I_alumnos_apellido" si existe:
+9- Solicite que se elimine el Ã­ndice "I_alumnos_apellido" si existe:
  if exists (select name from sysindexes
   where name = 'I_alumnos_apellido')
    drop index alumnos.I_alumnos_apellido;
 
-10- Elimine el índice "PK_alumnos_legajo" (quite la restricción).
+10- Elimine el Ã­ndice "PK_alumnos_legajo" (quite la restricciÃ³n).
 
-11- Verifique que el índice "PK_alumnos_legajo" ya no existe:
+11- Verifique que el Ã­ndice "PK_alumnos_legajo" ya no existe:
  exec sp_helpindex alumnos;
 
 */
