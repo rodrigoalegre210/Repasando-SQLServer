@@ -1,7 +1,7 @@
 /*
 
 Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
-1- Elimine la tabla si existe y créela con la siguiente estructura:
+1- Elimine la tabla si existe y crÃ©ela con la siguiente estructura:
  if object_id('alumnos') is not null
   drop table alumnos;
  create table alumnos(
@@ -20,62 +20,62 @@ Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
  insert into alumnos values ('A457','26666666','Perez','Fabian',3.2);
  insert into alumnos values ('A589','27777777','Gomez','Gaston',6.90);
 
-3- Intente crear un índice agrupado único para el campo "apellido".
+3- Intente crear un Ã­ndice agrupado Ãºnico para el campo "apellido".
 No lo permite porque hay valores duplicados.
 
-4- Cree un índice agrupado, no único, para el campo "apellido".
+4- Cree un Ã­ndice agrupado, no Ãºnico, para el campo "apellido".
 
-5- Intente establecer una restricción "primary key" al campo "legajo" especificando que cree un 
-índice agrupado.
-No lo permite porque ya existe un índice agrupado y solamente puede haber uno por tabla.
+5- Intente establecer una restricciÃ³n "primary key" al campo "legajo" especificando que cree un 
+Ã­ndice agrupado.
+No lo permite porque ya existe un Ã­ndice agrupado y solamente puede haber uno por tabla.
 
-6- Establezca la restricción "primary key" al campo "legajo" especificando que cree un índice NO 
+6- Establezca la restricciÃ³n "primary key" al campo "legajo" especificando que cree un Ã­ndice NO 
 agrupado.
 
-7- Vea los índices de "alumnos":
+7- Vea los Ã­ndices de "alumnos":
  exec sp_helpindex alumnos;
-2 índices: uno "I_alumnos_apellido", agrupado, con "apellido" y otro "PK_alumnos_legajo", no 
-agrupado, unique, con "legajo" que se creó automáticamente al crear la restricción "primary key".
+2 Ã­ndices: uno "I_alumnos_apellido", agrupado, con "apellido" y otro "PK_alumnos_legajo", no 
+agrupado, unique, con "legajo" que se creÃ³ automÃ¡ticamente al crear la restricciÃ³n "primary key".
 
-8- Analice la información que muestra "sp_helpconstraint":
+8- Analice la informaciÃ³n que muestra "sp_helpconstraint":
  exec sp_helpconstraint libros;
-En la columna "constraint_type" aparece "PRIMARY KEY" y entre paréntesis, el tipo de índice creado.
+En la columna "constraint_type" aparece "PRIMARY KEY" y entre parÃ©ntesis, el tipo de Ã­ndice creado.
 
-9- Cree un índice unique no agrupado para el campo "documento".
+9- Cree un Ã­ndice unique no agrupado para el campo "documento".
 
 10- Intente ingresar un alumno con documento duplicado.
 No lo permite.
 
 11- Veamos los indices de "alumnos".
-Aparecen 3 filas, uno por cada índice.
+Aparecen 3 filas, uno por cada Ã­ndice.
 
-12- Cree un índice compuesto para el campo "apellido" y "nombre".
-Se creará uno no agrupado porque no especificamos el tipo, además, ya existe uno agrupado y 
+12- Cree un Ã­ndice compuesto para el campo "apellido" y "nombre".
+Se crearÃ¡ uno no agrupado porque no especificamos el tipo, ademÃ¡s, ya existe uno agrupado y 
 solamente puede haber uno por tabla.
 
-13- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados para 
+13- Consulte la tabla "sysindexes", para ver los nombres de todos los Ã­ndices creados para 
 "alumnos":
  select name from sysindexes
   where name like '%alumnos%';
-4 índices.
+4 Ã­ndices.
 
-14- Cree una restricción unique para el campo "documento".
+14- Cree una restricciÃ³n unique para el campo "documento".
 
-15- Vea la información de "sp_helpconstraint".
+15- Vea la informaciÃ³n de "sp_helpconstraint".
 
-16- Vea los índices de "alumnos".
-Aparecen 5 filas, uno por cada índice.
+16- Vea los Ã­ndices de "alumnos".
+Aparecen 5 filas, uno por cada Ã­ndice.
 
-17- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados para 
+17- Consulte la tabla "sysindexes", para ver los nombres de todos los Ã­ndices creados para 
 "alumnos":
  select name from sysindexes
   where name like '%alumnos%';
-5 índices.
+5 Ã­ndices.
 
-18- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados por usted:
+18- Consulte la tabla "sysindexes", para ver los nombres de todos los Ã­ndices creados por usted:
  select name from sysindexes
   where name like 'I_%';
-3 índices. Recuerde que los índices que crea SQL Server automáticamente al agregarse una restricción 
+3 Ã­ndices. Recuerde que los Ã­ndices que crea SQL Server automÃ¡ticamente al agregarse una restricciÃ³n 
 "primary" o "unique" no comienzan con "I_".
 
 */
