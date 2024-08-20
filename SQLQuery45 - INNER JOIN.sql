@@ -1,6 +1,6 @@
 /*
 
-Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tambi閚 tiene una tabla 
+Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tambi茅n tiene una tabla 
 "provincias" donde registra los nombres de las provincias.
 1- Elimine las tablas "clientes" y "provincias", si existen:
   if (object_id('clientes')) is not null
@@ -8,7 +8,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tamb
   if (object_id('provincias')) is not null
    drop table provincias;
 
-2- Cr閑las con las siguientes estructuras:
+2- Cr茅elas con las siguientes estructuras:
  create table clientes (
   codigo int identity,
   nombre varchar(30),
@@ -29,7 +29,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tamb
  insert into provincias (nombre) values('Santa Fe');
  insert into provincias (nombre) values('Corrientes');
 
- insert into clientes values ('Lopez Marcos','Colon 111','C髍doba',1);
+ insert into clientes values ('Lopez Marcos','Colon 111','C贸rdoba',1);
  insert into clientes values ('Perez Ana','San Martin 222','Cruz del Eje',1);
  insert into clientes values ('Garcia Juan','Rivadavia 333','Villa Maria',1);
  insert into clientes values ('Perez Luis','Sarmiento 444','Rosario',2);
@@ -43,7 +43,7 @@ Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tamb
   join provincias as p
   on c.codigoprovincia=p.codigo;
 
-5- Obtenga la misma informaci髇 anterior pero ordenada por nombre de provincia.
+5- Obtenga la misma informaci贸n anterior pero ordenada por nombre de provincia.
 
 6- Recupere los clientes de la provincia "Santa Fe" (2 registros devueltos)
 
@@ -78,7 +78,7 @@ insert into provincias (nombre) values('Cordoba');
 insert into provincias (nombre) values('Santa Fe');
 insert into provincias (nombre) values('Corrientes');
 
-insert into clientes values ('Lopez Marcos','Colon 111','C髍doba',1);
+insert into clientes values ('Lopez Marcos','Colon 111','C贸rdoba',1);
 insert into clientes values ('Perez Ana','San Martin 222','Cruz del Eje',1);
 insert into clientes values ('Garcia Juan','Rivadavia 333','Villa Maria',1);
 insert into clientes values ('Perez Luis','Sarmiento 444','Rosario',2);
@@ -116,7 +116,7 @@ WHERE P.nombre = 'Santa Fe';
 
 /*
 
-Un club dicta clases de distintos deportes. Almacena la informaci髇 en una tabla llamada 
+Un club dicta clases de distintos deportes. Almacena la informaci贸n en una tabla llamada 
 "inscriptos" que incluye el documento, el nombre, el deporte y si la matricula esta paga o no y una 
 tabla llamada "inasistencias" que incluye el documento, el deporte y la fecha de la inasistencia.
 1- Elimine las tablas si existen y cree las tablas:
@@ -155,14 +155,14 @@ tabla llamada "inasistencias" que incluye el documento, el deporte y la fecha de
  insert into inasistencias values('23333333','natacion','2006-12-02');
 
 3- Muestre el nombre, el deporte y las fechas de inasistencias, ordenado por nombre y deporte.
-Note que la condici髇 es compuesta porque para identificar los registros de la tabla "inasistencias" 
+Note que la condici贸n es compuesta porque para identificar los registros de la tabla "inasistencias" 
 necesitamos ambos campos.
 
 4- Obtenga el nombre, deporte y las fechas de inasistencias de un determinado inscripto en un 
 determinado deporte (3 registros)
 
 5- Obtenga el nombre, deporte y las fechas de inasistencias de todos los inscriptos que pagaron la 
-matr韈ula(4 registros)
+matr铆cula(4 registros)
 
 */
 
