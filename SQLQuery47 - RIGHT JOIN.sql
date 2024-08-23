@@ -1,6 +1,6 @@
 /*
 
-Una empresa tiene registrados sus clientes en una tabla llamada "clientes", también tiene una 
+Una empresa tiene registrados sus clientes en una tabla llamada "clientes", tambiÃ©n tiene una 
 tabla "provincias" donde registra los nombres de las provincias.
 1- Elimine las tablas "clientes" y "provincias", si existen y cree las tablas:
   if (object_id('clientes')) is not null
@@ -28,7 +28,7 @@ tabla "provincias" donde registra los nombres de las provincias.
  insert into provincias (nombre) values('Santa Fe');
  insert into provincias (nombre) values('Corrientes');
 
- insert into clientes values ('Lopez Marcos','Colon 111','Córdoba',1);
+ insert into clientes values ('Lopez Marcos','Colon 111','CÃ³rdoba',1);
  insert into clientes values ('Perez Ana','San Martin 222','Cruz del Eje',1);
  insert into clientes values ('Garcia Juan','Rivadavia 333','Villa Maria',1);
  insert into clientes values ('Perez Luis','Sarmiento 444','Rosario',2);
@@ -44,7 +44,7 @@ join".
 5- Empleando un "right join", muestre solamente los clientes de las provincias que existen en 
 "provincias" (5 registros)
 
-6- Muestre todos los clientes cuyo código de provincia NO existe en "provincias" ordenados por 
+6- Muestre todos los clientes cuyo cÃ³digo de provincia NO existe en "provincias" ordenados por 
 ciudad (2 registros)
 
 */
@@ -76,7 +76,7 @@ insert into provincias (nombre) values('Cordoba');
 insert into provincias (nombre) values('Santa Fe');
 insert into provincias (nombre) values('Corrientes');
 
-insert into clientes values ('Lopez Marcos','Colon 111','Córdoba',1);
+insert into clientes values ('Lopez Marcos','Colon 111','CÃ³rdoba',1);
 insert into clientes values ('Perez Ana','San Martin 222','Cruz del Eje',1);
 insert into clientes values ('Garcia Juan','Rivadavia 333','Villa Maria',1); 
 insert into clientes values ('Perez Luis','Sarmiento 444','Rosario',2);
