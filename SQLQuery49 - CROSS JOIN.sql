@@ -1,8 +1,8 @@
 /*
 
-Una agencia matrimonial almacena la información de sus clientes de sexo femenino en una tabla 
+Una agencia matrimonial almacena la informaciÃ³n de sus clientes de sexo femenino en una tabla 
 llamada "mujeres" y en otra la de sus clientes de sexo masculino llamada "varones".
-1- Elimine las tablas si existen y créelas:
+1- Elimine las tablas si existen y crÃ©elas:
  if object_id('mujeres') is not null
   drop table mujeres;
  if object_id('varones') is not null
@@ -28,13 +28,13 @@ llamada "mujeres" y en otra la de sus clientes de sexo masculino llamada "varone
  insert into varones values('Federico Pereyra','Colon 234',38);
  insert into varones values('Juan Garcia','Peru 333',50);
 
-3- La agencia necesita la combinación de todas las personas de sexo femenino con las de sexo 
+3- La agencia necesita la combinaciÃ³n de todas las personas de sexo femenino con las de sexo 
 masculino. Use un "cross join" (12 registros)
 
-4- Realice la misma combinación pero considerando solamente las personas mayores de 40 años (6 
+4- Realice la misma combinaciÃ³n pero considerando solamente las personas mayores de 40 aÃ±os (6 
 registros)
 
-5- Forme las parejas pero teniendo en cuenta que no tengan una diferencia superior a 10 años (8 
+5- Forme las parejas pero teniendo en cuenta que no tengan una diferencia superior a 10 aÃ±os (8 
 registros)
 
 */
@@ -97,7 +97,7 @@ WHERE M.edad - V.edad BETWEEN -10 AND 10;
 /*
 
 Una empresa de seguridad almacena los datos de sus guardias de seguridad en una tabla llamada 
-"guardias". también almacena los distintos sitios que solicitaron sus servicios en una tabla llamada 
+"guardias". tambiÃ©n almacena los distintos sitios que solicitaron sus servicios en una tabla llamada 
 "tareas".
 1- Elimine las tablas "guardias" y "tareas" si existen:
  if object_id('guardias') is not null
