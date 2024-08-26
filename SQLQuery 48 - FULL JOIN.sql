@@ -1,8 +1,8 @@
 /*
 
-Un club dicta clases de distintos deportes. Almacena la informaciÛn en una tabla llamada "deportes" 
+Un club dicta clases de distintos deportes. Almacena la informaci√≥n en una tabla llamada "deportes" 
 en la cual incluye el nombre del deporte y el nombre del profesor y en otra tabla llamada 
-"inscriptos" que incluye el documento del socio que se inscribe, el deporte y si la matricula est· 
+"inscriptos" que incluye el documento del socio que se inscribe, el deporte y si la matricula est√° 
 paga o no.
 1- Elimine las tablas si existen y cree las tablas:
  if (object_id('deportes')) is not null
@@ -35,7 +35,7 @@ paga o no.
  insert into inscriptos values('22222222',4,'n'); 
  insert into inscriptos values('22222222',5,'n'); 
 
-3- Muestre todos la informaciÛn de la tabla "inscriptos", y consulte la tabla "deportes" para 
+3- Muestre todos la informaci√≥n de la tabla "inscriptos", y consulte la tabla "deportes" para 
 obtener el nombre de cada deporte (6 registros)
 
 4- Empleando un "left join" con "deportes" obtenga todos los datos de los inscriptos (7 registros)
