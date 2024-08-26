@@ -67,9 +67,9 @@ CREATE TABLE deportes(
 );
 
 CREATE TABLE inscriptos(
-	documento CHAR(8),
-	codigodeporte TINYINT NOT NULL,
-	matricula CHAR(1) -- S = Paga, N = Impaga
+	documento 		CHAR(8),
+	codigodeporte 		TINYINT NOT NULL,
+	matricula 		CHAR(1) -- S = Paga, N = Impaga
 );
 
 -- 2
