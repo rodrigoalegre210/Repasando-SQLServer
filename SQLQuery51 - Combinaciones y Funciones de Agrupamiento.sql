@@ -69,7 +69,7 @@ CREATE TABLE visitantes(
 	edad			TINYINT,
 	sexo			CHAR(1) DEFAULT 'f',
 	domicilio		VARCHAR(30),
-	codigociudad	TINYINT NOT NULL,
+	codigociudad		TINYINT NOT NULL,
 	mail			VARCHAR(30),
 	montocompra		DECIMAL(6,2)
 );
