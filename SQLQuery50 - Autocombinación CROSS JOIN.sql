@@ -1,7 +1,7 @@
 /*
 
-Una agencia matrimonial almacena la informaciÛn de sus clientes en una tabla llamada "clientes".
-1- Elimine la tabla si existe y crÈela:
+Una agencia matrimonial almacena la informaci√≥n de sus clientes en una tabla llamada "clientes".
+1- Elimine la tabla si existe y cr√©ela:
  if object_id('clientes') is not null
   drop table clientes;
 
@@ -22,13 +22,13 @@ Una agencia matrimonial almacena la informaciÛn de sus clientes en una tabla lla
  insert into clientes values('Federico Pereyra','m',38,'Colon 234');
  insert into clientes values('Juan Garcia','m',50,'Peru 333');
 
-3- La agencia necesita la combinaciÛn de todas las personas de sexo femenino con las de sexo 
+3- La agencia necesita la combinaci√≥n de todas las personas de sexo femenino con las de sexo 
 masculino. Use un  "cross join" (12 registros)
 
 4- Obtenga la misma salida enterior pero realizando un "join".
 
-5- Realice la misma autocombinaciÛn que el punto 3 pero agregue la condiciÛn que las parejas no 
-tengan una diferencia superior a 5 aÒos (5 registros)
+5- Realice la misma autocombinaci√≥n que el punto 3 pero agregue la condici√≥n que las parejas no 
+tengan una diferencia superior a 5 a√±os (5 registros)
 
 */
 
@@ -96,8 +96,8 @@ AND c1.edad - c2.edad BETWEEN -5 AND 5;
 /*
 
 Varios clubes de barrio se organizaron para realizar campeonatos entre ellos. La tabla llamada 
-"equipos" guarda la informacion de los distintos equipos que jugar·n.
-1- Elimine la tabla, si existe y crÈela nuevamente:
+"equipos" guarda la informacion de los distintos equipos que jugar√°n.
+1- Elimine la tabla, si existe y cr√©ela nuevamente:
  if object_id('equipos') is not null
   drop table equipos;
 
@@ -114,7 +114,7 @@ Varios clubes de barrio se organizaron para realizar campeonatos entre ellos. La
  insert into equipos values('Campeones','Pueyrredon','Guemes 346','Carlos Moreno');
  insert into equipos values('Cebollitas','Alberdi','Colon 1234','Luis Duarte');
 
-4- Cada equipo jugar· con todos los dem·s 2 veces, una vez en cada sede. Realice un "cross join" 
+4- Cada equipo jugar√° con todos los dem√°s 2 veces, una vez en cada sede. Realice un "cross join" 
 para combinar los equipos teniendo en cuenta que un equipo no juega consigo mismo (12 registros)
 
 5- Obtenga el mismo resultado empleando un "join".
