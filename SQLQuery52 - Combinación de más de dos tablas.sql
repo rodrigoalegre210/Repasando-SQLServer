@@ -1,11 +1,11 @@
 /*
 
 Un club dicta clases de distintos deportes. En una tabla llamada "socios" guarda los datos de los 
-socios, en una tabla llamada "deportes" la información referente a los diferentes deportes que se 
+socios, en una tabla llamada "deportes" la informaciÃ³n referente a los diferentes deportes que se 
 dictan y en una tabla denominada "inscriptos", las inscripciones de los socios a los distintos 
 deportes.
-Un socio puede inscribirse en varios deportes el mismo año. Un socio no puede inscribirse en el 
-mismo deporte el mismo año. Distintos socios se inscriben en un mismo deporte en el mismo año.
+Un socio puede inscribirse en varios deportes el mismo aÃ±o. Un socio no puede inscribirse en el 
+mismo deporte el mismo aÃ±o. Distintos socios se inscriben en un mismo deporte en el mismo aÃ±o.
 1- Elimine las tablas si existen:
  if object_id('socios') is not null
   drop table socios;
@@ -46,28 +46,28 @@ mismo deporte el mismo año. Distintos socios se inscriben en un mismo deporte en
  insert into deportes values('natacion','Marina Morales');
  insert into deportes values('tenis','Marina Morales');
 
-5- Inscriba a varios socios en el mismo deporte en el mismo año:
+5- Inscriba a varios socios en el mismo deporte en el mismo aÃ±o:
  insert into inscriptos values ('22222222',3,'2006','s');
  insert into inscriptos values ('23333333',3,'2006','s');
  insert into inscriptos values ('24444444',3,'2006','n');
 
-6- Inscriba a un mismo socio en el mismo deporte en distintos años:
+6- Inscriba a un mismo socio en el mismo deporte en distintos aÃ±os:
  insert into inscriptos values ('22222222',3,'2005','s');
  insert into inscriptos values ('22222222',3,'2007','n');
 
-7- Inscriba a un mismo socio en distintos deportes el mismo año:
+7- Inscriba a un mismo socio en distintos deportes el mismo aÃ±o:
  insert into inscriptos values ('24444444',1,'2006','s');
  insert into inscriptos values ('24444444',2,'2006','s');
 
-8- Ingrese una inscripción con un código de deporte inexistente y un documento de socio que no 
+8- Ingrese una inscripciÃ³n con un cÃ³digo de deporte inexistente y un documento de socio que no 
 exista en "socios":
  insert into inscriptos values ('26666666',0,'2006','s');
 
-9- Muestre el nombre del socio, el nombre del deporte en que se inscribió y el año empleando 
+9- Muestre el nombre del socio, el nombre del deporte en que se inscribiÃ³ y el aÃ±o empleando 
 diferentes tipos de join.
 
-10- Muestre todos los datos de las inscripciones (excepto los códigos) incluyendo aquellas 
-inscripciones cuyo código de deporte no existe en "deportes" y cuyo documento de socio no se 
+10- Muestre todos los datos de las inscripciones (excepto los cÃ³digos) incluyendo aquellas 
+inscripciones cuyo cÃ³digo de deporte no existe en "deportes" y cuyo documento de socio no se 
 encuentra en "socios".
 
 11- Muestre todas las inscripciones del socio con documento "22222222".
@@ -138,7 +138,7 @@ insert into inscriptos values ('26666666',0,'2006','s');
 -- 9
 SELECT S.nombre AS Nombre,
 D.nombre AS Deporte,
-I.anio AS Año
+I.anio AS AÃ±o
 FROM socios AS S
 JOIN inscriptos AS I
 ON S.documento = I.documento
@@ -147,7 +147,7 @@ ON I.codigodeporte = D.codigo;
 
 SELECT S.nombre AS Nombre,
 D.nombre AS Deporte,
-I.anio AS Año
+I.anio AS AÃ±o
 FROM deportes AS D
 RIGHT JOIN inscriptos AS I
 ON I.codigodeporte = D.codigo
@@ -157,7 +157,7 @@ ON I.documento = S.documento;
 -- 10
 SELECT S.nombre AS Nombre,
 D.nombre AS Deporte,
-I.anio AS Año,
+I.anio AS AÃ±o,
 I.matricula AS Matricula
 FROM deportes AS D
 FULL JOIN inscriptos AS I
@@ -168,7 +168,7 @@ ON I.documento = S.documento;
 -- 11
 SELECT S.nombre AS Nombre,
 D.nombre AS Deporte,
-I.anio AS Año,
+I.anio AS AÃ±o,
 I.matricula AS Matricula
 FROM deportes AS D
 JOIN inscriptos AS I
