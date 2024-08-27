@@ -52,7 +52,7 @@ en otra tabla llamada "ciudades" los nombres de las ciudades.
 
 6- Muestre la cantidad de visitantes con mail, agrupados por ciudad (3 filas)
 
-7- Obtenga el monto de compra m·s alto de cada ciudad (3 filas)
+7- Obtenga el monto de compra m√°s alto de cada ciudad (3 filas)
 
 */
 
