@@ -1,7 +1,7 @@
 /*
-Primer problema:
-Necesita almacenar los datos de sus amigos en una tabla. Los datos que guardar√° ser√°n: apellido, 
-nombre, domicilio y tel√©fono.
+
+Necesita almacenar los datos de sus amigos en una tabla. Los datos que guardar· ser·n: apellido, 
+nombre, domicilio y telÈfono.
 1- Elimine la tabla "agenda" si existe:
  if object_id('agenda') is not null
   drop table agenda;
@@ -13,7 +13,7 @@ nombre, domicilio y tel√©fono.
   domicilio varchar(30),
   telefono varchar(11)
  );
-aparece un mensaje de error porque usamos un caracter inv√°lido ("/") para el nombre.
+aparece un mensaje de error porque usamos un caracter inv·lido ("/") para el nombre.
 
 3- Cree una tabla llamada "agenda", debe tener los siguientes campos: apellido, varchar(30); nombre, 
 varchar(20); domicilio, varchar (30) y telefono, varchar(11):
@@ -33,25 +33,54 @@ varchar(20); domicilio, varchar (30) y telefono, varchar(11):
 7- Elimine la tabla.
 
 8- Intente eliminar la tabla, sin controlar si existe. Debe aparecer un mensaje de error.
+
+
 */
 
+-- 1
 IF OBJECT_ID('agenda') IS NOT NULL
 	DROP TABLE agenda;
 
-CREATE TABLE agenda(
-	apellido VARCHAR(20),
-	nombre VARCHAR(20),
-	domicilio VARCHAR(30),
-	telefono VARCHAR(11)
+-- 2
+CREATE TABLE /agenda(
+	apellido	VARCHAR(30),
+	nombre		VARCHAR(30),
+	domicilio	VARCHAR(30),
+	telefono	VARCHAR(11)
 );
 
+-- 3
+CREATE TABLE agenda(
+	apellido	VARCHAR(30),
+	nombre		VARCHAR(30),
+	domicilio	VARCHAR(30),
+	telefono	VARCHAR(11)
+);
+
+-- 4
+CREATE TABLE agenda(
+	apellido	VARCHAR(30),
+	nombre		VARCHAR(30),
+	domicilio	VARCHAR(30),
+	telefono	VARCHAR(11)
+);
+
+-- 5
+EXEC sp_tables @table_owner = 'dbo';
+
+-- 6
 EXEC sp_columns agenda;
 
+-- 7
+DROP TABLE agenda;
+
+-- 8
 DROP TABLE agenda;
 
 /*
-Necesita almacenar informaci√≥n referente a los libros de su biblioteca personal. Los datos que 
-guardar√° ser√°n: t√≠tulo del libro, nombre del autor y nombre de la editorial.
+
+Necesita almacenar informaciÛn referente a los libros de su biblioteca personal. Los datos que 
+guardar· ser·n: tÌtulo del libro, nombre del autor y nombre de la editorial.
 1- Elimine la tabla "libros", si existe:
  if object_id('libros') is not null
   drop table libros;
@@ -70,21 +99,38 @@ autor, varchar(30) y editorial, varchar(15).
 7- Elimine la tabla.
 
 8- Intente eliminar la tabla nuevamente.
+
 */
 
+-- 1
 IF OBJECT_ID('libros') IS NOT NULL
 	DROP TABLE libros;
 
-EXEC sp_tables @table_owner = 'dbo'
-
-CREATE TABLE libros(
-	titulo VARCHAR(20),
-	autor VARCHAR(30),
-	editorial VARCHAR(15)
-);
-
+-- 2
 EXEC sp_tables @table_owner = 'dbo';
 
+-- 3
+CREATE TABLE libros(
+	titulo		VARCHAR(20),
+	autor		VARCHAR(30),
+	editorial	VARCHAR(15)
+);
+
+-- 4
+CREATE TABLE libros(
+	titulo		VARCHAR(20),
+	autor		VARCHAR(30),
+	editorial	VARCHAR(15)
+);
+
+-- 5
+EXEC sp_tables @table_owner = 'dbo';
+
+-- 6
 EXEC sp_columns libros;
 
+-- 7
+DROP TABLE libros;
+
+-- 8
 DROP TABLE libros;
